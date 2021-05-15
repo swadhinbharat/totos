@@ -1,0 +1,96 @@
+#!/usr/bin/env node
+
+const { Command } = require('commander');
+
+const { exec, execSync } = require("child_process");
+const program = new Command();
+
+program.version('0.0.1', '-v, --vers', 'output the current version');
+
+// program
+//   .option('--dummy', 'Dummy option which will be removed')
+//   .parse();
+
+program
+  .command('ip')
+  .description('Show IPs')
+  .option('-l,--local', 'Local')
+  .option('-g,--global', 'Global')
+  .action(function (options) {
+    // When no options are provided
+    if (Object.keys(options).length === 0) {
+      getIpLocal();
+      getIpGlobal();
+    }
+    if (options.local) {
+      getIpLocal();
+    }
+    if (options.global) {
+      getIpGlobal();
+    }
+  })
+
+// Get IP
+// Local
+function getIpLocal() {
+  //TODO Need to format it for only IP addresses similar to global ip
+  exec(`ipconfig | findstr /i "ipv4"`, (error, stdout, stderr) => {
+    console.log(`Local:\n${stdout}`);
+  });
+}
+// Global
+function getIpGlobal() {
+  exec("curl http://ipecho.net/plain", (error, stdout, stderr) => {
+    console.log(`Global:\n${stdout}`);
+  });
+
+}
+
+
+
+// program
+//   .command('build')
+//   .description('build web site for deployment')
+//   .action(() => {
+//     console.log('build');
+//   });
+
+// program
+//   .command('deploy')
+//   .description('deploy web site to production')
+//   .action(() => {
+//     console.log('deploy');
+//   });
+
+// program
+//   .command('serve', { isDefault: true })
+//   .description('launch web server')
+//   .option('-p,--port <port_number>', 'web port', '8080')
+//   .action((options) => {
+//     console.log(`server on port ${options.port}`);
+//   });
+
+// program.parse(process.argv);
+
+
+// // Command implemented using action handler (description is supplied separately to `.command`)
+// // Returns new command for configuring.
+// program
+//   .command('clone <source> [destination]')
+//   .description('clone a repository into a newly created directory')
+//   .action((source, destination) => {
+//     console.log('clone command called');
+//   });
+
+// // Command implemented using stand-alone executable file (description is second parameter to `.command`)
+// // Returns `this` for adding more commands.
+// program
+//   .command('start <service>', 'start named service')
+//   .command('stop [service]', 'stop named service, or all if no name supplied');
+
+// // Command prepared separately.
+// // Returns `this` for adding more commands.
+// // program
+// //   .addCommand(build.makeBuildCommand());
+
+program.parse(process.argv);

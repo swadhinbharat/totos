@@ -1,11 +1,13 @@
 {
   "name": "toto",
   "version": "0.0.1",
-  "description": "A utility program to do simple repetitive tasks",
-  "main": "app.js",
+  "description": "A utility program to do simple and common tasks",
+  "main": "toto",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node toto"
   },
+  "bin": "./toto",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/swadhinbharat/toto.git"
@@ -18,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/swadhinbharat/toto/issues"
   },
-  "homepage": "https://github.com/swadhinbharat/toto#readme"
+  "homepage": "https://github.com/swadhinbharat/toto#readme",
+  "dependencies": {
+    "colors": "^1.2.1",
+    "commander": "^7.2.0",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "mocha": "^8.4.0"
+  }
 }
