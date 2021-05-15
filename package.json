@@ -1,13 +1,15 @@
 {
-  "name": "toto",
+  "name": "totos",
   "version": "0.0.2",
   "description": "A utility program to do simple and common tasks",
-  "main": "toto",
+  "main": "totos",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node toto"
+    "start": "node totos"
   },
-  "bin": "./toto",
+  "bin": {
+    "totos": "totos"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/swadhinbharat/toto.git"
