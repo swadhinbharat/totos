@@ -1,0 +1,22 @@
+{
+  "name": "toto",
+  "version": "0.0.1",
+  "description": "A utility program to do simple repetitive tasks",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swadhinbharat/toto.git"
+  },
+  "keywords": [
+    "utility"
+  ],
+  "author": "Swadhin Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swadhinbharat/toto/issues"
+  },
+  "homepage": "https://github.com/swadhinbharat/toto#readme"
+}
