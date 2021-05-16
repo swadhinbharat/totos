@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/swadhinbharat/toto.git"
+    "url": "git+https://github.com/swadhinbharat/totos.git"
   },
   "keywords": [
     "utility"
@@ -20,9 +20,9 @@
   "author": "Swadhin Patel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/swadhinbharat/toto/issues"
+    "url": "https://github.com/swadhinbharat/totos/issues"
   },
-  "homepage": "https://github.com/swadhinbharat/toto#readme",
+  "homepage": "https://github.com/swadhinbharat/totos#readme",
   "dependencies": {
     "colors": "^1.2.1",
     "commander": "^7.2.0",
@@ -31,5 +31,8 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^8.4.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
