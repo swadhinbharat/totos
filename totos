@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
+const pjson = require('./package.json');
 const { Command } = require('commander');
-
 const { exec, execSync } = require("child_process");
+
 const program = new Command();
 
-program.version('0.0.1', '-v, --vers', 'output the current version');
+program.version(pjson.version, '-v, --vers', 'output the current version');
 
 // program
 //   .option('--dummy', 'Dummy option which will be removed')
