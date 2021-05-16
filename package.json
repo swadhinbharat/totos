@@ -1,10 +1,10 @@
 {
   "name": "totos",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A utility program to do simple and common tasks",
   "main": "totos",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node totos"
   },
   "bin": {
@@ -29,6 +29,7 @@
     "lodash": "^4.17.5"
   },
   "devDependencies": {
+    "chai": "^4.3.4",
     "mocha": "^8.4.0"
   }
 }
