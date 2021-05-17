@@ -8,8 +8,8 @@ npm install -g totos
 ```
 
 ## Options
-[Version](#version)
-[IP](#ip)
+- [Version](#version)
+- [IP](#ip)
 
 ### Version
 ```bash
