@@ -3,6 +3,7 @@
 const pjson = require('./package.json');
 const { Command } = require('commander');
 const { exec, execSync } = require("child_process");
+var platform = require('platform-detect')
 
 const program = new Command();
 
@@ -35,9 +36,18 @@ program
 // Local
 function getIpLocal() {
   //TODO Need to format it for only IP addresses similar to global ip
+  if (platform.windows) {
   exec(`ipconfig | findstr /i "ipv4"`, (error, stdout, stderr) => {
     console.log(`Local:\n${stdout}`);
-  });
+  });    
+  }
+  if (!platform.windows) {
+  exec(`ifconfig -a | grep 'inet '`, (error, stdout, stderr) => {
+    console.log(`Local:\n${stdout}`);
+  });    
+  }
+
+
 }
 // Global
 function getIpGlobal() {
