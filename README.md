@@ -1,4 +1,4 @@
-# toto
+# totos
 A utility program to do simple repetetive tasks
 
 ## Installation
@@ -16,7 +16,6 @@ npm install -g totos
 # Get version
 totos -v
 totos --version
-
 ```
 
 
