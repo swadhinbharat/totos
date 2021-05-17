@@ -1,6 +1,6 @@
 {
   "name": "totos",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A utility program to do simple and common tasks",
   "main": "totos",
   "scripts": {

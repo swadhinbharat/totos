@@ -36,13 +36,11 @@ program
 // Local
 function getIpLocal() {
   //TODO Need to format it for only IP addresses similar to global ip
-  console.log(platform.windows);
   if (platform.windows) {
     exec(`ipconfig | findstr /i "ipv4"`, (error, stdout, stderr) => {
       console.log(`Local:\n${stdout}`);
     });
   }
-  console.log(!platform.windows);
   if (!platform.windows) {
     exec(`ip addr | grep 'inet '`, (error, stdout, stderr) => {
       console.log(`Local:\n${stdout}`);
