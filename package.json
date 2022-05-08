@@ -25,7 +25,7 @@
   "homepage": "https://github.com/swadhinbharat/totos#readme",
   "dependencies": {
     "colors": "^1.2.1",
-    "commander": "^7.2.0",
+    "commander": "^9.0.0",
     "lodash": "^4.17.5",
     "platform-detect": "^3.0.1"
   },
